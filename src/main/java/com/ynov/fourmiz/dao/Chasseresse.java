@@ -24,5 +24,9 @@ public class Chasseresse extends Fourmi{
         return "Je suis une chasseresse, j'ai " + this.getAge() + " an(s) et je suis plus forte que les autres : " + this.getForce() + " 🏋️!";
     }
 
-
+    public void chasser(Fourmiliere fourmiliere){
+        int stockNourritureActuel = fourmiliere.getStockNourriture();
+        fourmiliere.setStockNourriture(stockNourritureActuel + this.getForce());
+        System.out.println("La fourmilière est passée de " + stockNourritureActuel + " à " + fourmiliere.getStockNourriture() + " de nourriture");
+    }
 }
