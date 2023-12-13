@@ -15,7 +15,7 @@ public class Chasseresse extends Fourmi{
     }
 
     @Override
-    public float seDeplacer() {
+    public float seDeplacer(String env) {
        return super.getForce();
     }
 

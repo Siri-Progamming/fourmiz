@@ -24,16 +24,14 @@ public abstract class Fourmi {
         return "Je fredonne par mes mandibules une chanson nulle";
     }
 
-    //TODO : je retourne 1 ?
     /**
-     * Cette méthode permet à la fourmi de se déplacer dans son environnement
+     * Cette méthode permet à la fourmi de se déplacer dans son environnement.
+     * Elle est abstraite car le résultat dépend de la spécialisation de la fourmi
      *
      * @param env : l'environnement dans lequel la fourmi se déplace, il fait varier sa vitesse -> "sable", "roche", "herbe"
      * @return : la vitesse de déplacement de la fourmi
      */
-    public float seDeplacer(String env) {
-        return 1.0f;
-    }
+    public abstract float seDeplacer(String env);
 
     /**
      * Cette méthode permet de retourner les informations générales de la fourmi
@@ -44,5 +42,4 @@ public abstract class Fourmi {
         return "Je suis une fourmi, j'ai " + this.age + " an(s) et je suis super forte : " + this.force + " !";
     }
 
-    public abstract float seDeplacer();
 }

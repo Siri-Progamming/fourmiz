@@ -15,7 +15,7 @@ public class Nourrice extends Fourmi {
 
     @Override
     public float seDeplacer(String env) {
-        if (env.equals("herbe")) {
+        if (env.equalsIgnoreCase("herbe")) {
             return 0.5f;
         } else return 1.0f;
     }
