@@ -1,4 +1,4 @@
-package com.ynov.fourmiz.dao;
+package com.ynov.fourmiz.objets;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -25,15 +25,15 @@ public class Nourrice extends Fourmi {
             fourmiliere.setOeufs(fourmiliere.getOeufs() - 1);
             Fourmi nouvelleFourmi = randomSpecialisation();
             fourmiliere.getFourmis().add(nouvelleFourmi);
-            System.out.println("Une nouvelle fourmi est née ! Écoutons ce qu'elle a à dire :\n" + nouvelleFourmi.toString());
+            System.out.println("Une nouvelle fourmi est née ! \n" + nouvelleFourmi.toString());
         }
     }
 
     public Fourmi randomSpecialisation() {
         Random r = new Random();
-        int random = r.nextInt(1, 3);
+        int random = r.nextInt(1, 4);
         return switch (random) {
-            case 1 -> new Chasseresse(0, 9);
+            case 1 -> new Chasseresse(0, r.nextInt(6,10));
             case 2 -> new Ouvriere(0, 5);
             default -> new Nourrice(0, 4);
         };
@@ -41,7 +41,7 @@ public class Nourrice extends Fourmi {
 
     @Override
     public String toString() {
-        return "Je suis une nourrice, j'ai " + this.getAge() + " an(s) et je suis super forte : " + this.getForce() + " !";
+        return "Nourrice | 🎂 "+ this.getAge() + " | 💪" + this.getForce();
     }
 
 }

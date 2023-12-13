@@ -1,4 +1,4 @@
-package com.ynov.fourmiz.dao;
+package com.ynov.fourmiz.objets;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -39,7 +39,7 @@ public abstract class Fourmi {
      * @return : Des informations sur la fourmi
      */
     public String toString() {
-        return "Je suis une fourmi, j'ai " + this.age + " an(s) et je suis super forte : " + this.force + " !";
+        return "Fourmi | 🎂 "+ this.getAge() + " | 💪" + this.getForce();
     }
 
 }
